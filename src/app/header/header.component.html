@@ -1,0 +1,42 @@
+<header>
+    <nav class="navbar navbar-expand-lg navigation-wrap">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../assets/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"  (click)="toggleDisplay()">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <div class="line-1 line-ml"></div>
+            <div class="line-1"></div>
+            <div class="line-1 line-ml"></div>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav" [class.show]="displayBlock" [class.hide]="!displayBlock">  
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#explore-food">Explore Foods</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonial">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+              <li *ngIf="!isLoggedIn()">
+                <button class="main-btn" [routerLink]="['/login']">Login</button>
+              </li>
+              <li>
+                <li *ngIf="isLoggedIn()">
+                  <button class="main-btn">LogOut</button>
+                </li>
+                <li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>

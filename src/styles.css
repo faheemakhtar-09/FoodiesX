@@ -1,1 +1,267 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color) !important;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* variable definitin */
+:root {
+    --primary-color: #A82C48;
+    --secondry-color: #43121d;
+    --third-color: #f98169;
+    --white-color: #fff;
+    --text-color: #555;
+    --text-gray: #999;
+    --black-color: #000;
+    --primary-font: 'Roboto', sens-serif;
+    --secondry-font: 'Quicksand', sens-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: (var(--primary-font));
+    font-size: 100%;
+    font-weight: 400;
+
+}
+
+/* ====================== */
+/* custom scrol bar  */
+/* ========================= */
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+/* ================= */
+/* custom css degin
+======================= */
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--secondry-color);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    text-transform: capitalize;
+    font-family: var(--secondry-font);
+    line-height: 3rem;
+}
+
+h4 {
+    color: var(--secondry-color);
+    font-family: var(--secondry-font);
+    text-transform: capitalize;
+    font-size: 18px;
+    font: 800;
+    margin-bottom: 0.5rem;
+
+}
+
+h5 {
+    color: var(--primary-color);
+    text-transform: capitalize;
+    font-family: var(--secondry-font);
+    font-size: 18px;
+    font: 700;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 1px;
+}
+
+.main-btn {
+    display: inline;
+    padding: 00.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    color: var(--white-color);
+    font-size: 0.9375;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0, 0, 0);
+    -webkit-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.white-btn {
+    padding: 00.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    color: var(--white-color);
+    font-size: 0.9375;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0, 0, 0/19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.white-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.wrapper {
+    padding-top: 8.25rem;
+    padding-bottom: 8.25rem;
+}
+
+.text-content {
+    width: 70%;
+    margin: auto;
+}
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2 {
+    color: var(--white-color);
+}
+
+@media (max-width:991px) {
+
+    /* custom class */
+    .text-content {
+        width: 100%;
+
+    }
+
+    /* nav brand  */
+    .navigation-wrap .navbar-brand img {
+        height: 3.8125rem;
+    }
+
+    .navigation-wrap {
+        text-align: center;
+        background-color: var(--white-color);
+    }
+
+    .navigation-wrap .nav-link {
+        line-height: 1.875rem;
+    }
+
+    /* banner design */
+    .top-banner {
+        padding: 9.375rem 0 9.375rem;
+    }
+
+    /* carousel design */
+    .testimonial-section .carousel-item .carousel-caption p {
+        padding: 0;
+    }
+
+}
+
+@media (max-width:767px) {
+
+    /* custom css  */
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.0625rem;
+    }
+
+    /* banner top design */
+    .top-banner {
+        padding: 10.875rem 0 9.375rem;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    /* story-section */
+    .story-section {
+        height: auto;
+        padding: 3rem 0;
+    }
+
+    /* carousel design */
+    .testimonial-section .carousel-item {
+        padding: 11rem 3.125rem;
+    }
+
+    /* new letter  */
+    .newsletter {
+        width: 75%;
+    }
+
+    .newsletter .main-btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* footer  */
+    .footer .footer-link,
+    .footer a i {
+        padding: 0 0.7rem;
+    }
+
+}
+
+@media (max-width:330px) {
+
+
+    /* carousel design */
+    .testimonial-section .carousel-item {
+        padding: 15rem 5.125rem;
+    }
+
+}

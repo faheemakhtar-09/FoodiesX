@@ -1,0 +1,19 @@
+<div class="container container-main">
+
+    <div class="card">
+        <h2>Register Form</h2>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <label for="fullname" >Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter your full name" formControlName="fullname">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" formControlName="email">
+
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" placeholder="Enter your new password" formControlName="password">
+
+            <button type="submit">Register</button>
+        </form>
+        <div class="switch">Already have an account? <a href="#" onclick="switchCard()">Login here</a></div>
+    </div>
+</div>

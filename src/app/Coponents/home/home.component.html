@@ -1,0 +1,78 @@
+<section id="home" >
+    <div class="container-fluid px-0 top-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6">
+            <h1>Good food choice are good invesment</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.ntium, quibusdam harum reprehenderit iste voluptatum doloremque. Deserunt, sapiente fugit?
+  
+            </p>
+            <div class="mt-4">
+              <button class="btn">Order Now <i class="fas fa-shopping-basket ps-3"></i></button>
+              <button class="white-btn ms-lg-4 mt-lg-0">Order Now <i class="fas fa-angle-right ps-3"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="explore-food">
+    <div class="explore-food wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="text-content text-center">
+              <h2>Explore Our Food</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quae nihil eaque possimus. Animi rerum nisi itaque, maiores aspernatur rem vel autem excepturi deleniti delectus vero, reiciendis dicta! Aspernatur, rem.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5">
+          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card">
+              <img src="./assets/card-images/img-3.jpg" alt="" class="img-fluid">
+              <div class="pt-3">
+                <h4>Rainbow Vegetable Sandwich</h4>
+                <p>Time: 15 - 20 Minutes | Server 1</p>
+                <span>$10.50 <del>$11.70</del></span>
+                <button class="mt-4 main-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card">
+              <img src="./assets/card-images/img-4.jpg" alt="" class="img-fluid">
+              <div class="pt-3">
+                <h4>Vegetarian Burger</h4>
+                <p>Time: 30 - 45 Minutes | Server 1</p>
+                <span>$9.20 <del>$10.50</del></span>
+                <button class="mt-4 main-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+            <div class="card">
+              <img src="./assets/card-images/img-1.png" alt="" class="img-fluid">
+              <div class="pt-3">
+                <h4>Raspbarry Stuffed French Toast</h4>
+                <p>Time: 10 - 15 Minutes | Server 1</p>
+                <span>$12.50 <del>$13.70</del></span>
+                <button class="mt-4 main-btn">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div>
+        <form action="" class="p-4" #f="ngForm" (ngSubmit)="addData(f)">
+          <input type="text" placeholder="title" class="m-3" name="title" ngModel>
+          <input type="text" placeholder="full-contents" class="m-3" name="full-contents" ngModel>
+          <input type="text" placeholder="price" class="m-3" name="price" ngModel>
+          <button type="submit">save  </button>
+        </form>
+      </div>
+    </div>
+  </section>

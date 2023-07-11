@@ -1,0 +1,30 @@
+.top-banner{
+    width: 100%;
+    background: url("https://imgtr.ee/images/2023/07/01/ec0ea133188918d0a129f7792e89fb7b.jpeg") no-repeat center;
+    background-size:cover;
+    padding: 16.875rem 0 9.375rem;
+}
+.explore-food .card{
+    border: none;
+    background: transparent;
+    border-radius: 0.9375rem;
+ }
+ .explore-food .card img{
+     border-radius: 00.9375rem;
+     object-fit: cover;
+ 
+ }
+ .explore-food .card span{
+     display: block;
+     font-size: 1.5rem;
+     font-weight: 700;
+     color: var(--primary-color);
+     padding-bottom: 1rem;
+     border-bottom: 0.0625rem solid #eee;
+ 
+ }
+ .explore-food .card span del{
+     color: var(--text-gray);
+     margin-left: 0.5rem;
+ }
+ 

@@ -1,0 +1,9 @@
+<p>my-comttt works!</p>
+<input type="file" accept="image/*" (change)="onFileSelected($event)" />
+<button (click)="upload()">Upload</button>
+
+<div class="container">
+  <div *ngFor="let imageUrl of imageUrls$ | async">
+    <img [src]="imageUrl" alt="Image" width="200" height="200">
+  </div>
+</div>
