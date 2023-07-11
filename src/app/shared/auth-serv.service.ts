@@ -51,26 +51,39 @@ export class AuthServService {
   }
   // login 
  
-  getUserByEmail(email: string): Promise<any> {
-    return new Promise((resolve, reject) => {
-      this.db
-        .list('user-form-data', (ref) =>
-          ref.orderByChild('email').equalTo(email).limitToFirst(1)
-        )
-        .valueChanges()
-        .pipe(
-          map((users) => {
-            return users.length > 0 ? users[0] : null;
-          })
-        )
-        .subscribe(
-          (user) => {
-            resolve(user);
-          },
-          (error) => {
-            reject(error);
-          }
-        );
-    });
+    getUserByEmail(email: string): Promise<any> {
+      return new Promise((resolve, reject) => {
+        const storedUser = localStorage.getItem('loggedInUser');
+  
+        if (storedUser) {
+          resolve(JSON.parse(storedUser));
+        } else {
+          this.db
+            .list('user-form-data', (ref) =>
+              ref.orderByChild('email').equalTo(email).limitToFirst(1)
+            )
+            .valueChanges()
+            .pipe(
+              map((users) => {
+                return users.length > 0 ? users[0] : null;
+              })
+            )
+            .subscribe(
+              (user) => {
+                localStorage.setItem('loggedInUser', JSON.stringify(user));
+                resolve(user);
+              },
+              (error) => {
+                reject(error);
+              }
+            );
+        }
+      });
+    }
+  
+    logout() {
+      
+      localStorage.removeItem('loggedInUser');
+    }
   }
-}
+  

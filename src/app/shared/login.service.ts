@@ -6,7 +6,10 @@ import { Injectable } from '@angular/core';
 export class LoginService {
   loggedIn = false; // Flag to track login status
 
-  constructor() { }
+  constructor() {
+    const storedLoggedIn = localStorage.getItem('loggedIn');
+    this.loggedIn = storedLoggedIn === 'true';
+  }
   
   setLoggedIn(value: boolean) {
     this.loggedIn = value;
@@ -15,4 +18,9 @@ export class LoginService {
   isLoggedIn(): boolean {
     return this.loggedIn;
   }
+  logout() {
+    this.loggedIn = false;
+    localStorage.removeItem('loggedInUser');
+  }
+  
 }
